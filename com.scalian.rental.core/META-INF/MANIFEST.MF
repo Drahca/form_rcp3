@@ -6,11 +6,12 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: com.scalian.rental.core.RentalCoreActivator
 Bundle-Vendor: SCALIAN
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.common;bundle-version="2.19.0",
- org.eclipse.emf.ecore;bundle-version="2.22.0"
+ org.eclipse.emf.common;visibility:=reexport,
+ org.eclipse.emf.ecore
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.scalian.rental.core
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: rental.jar,
  .
-Export-Package: com.scalian.rental.core
+Export-Package: com.opcoach.training.rental,
+ com.scalian.rental.core
