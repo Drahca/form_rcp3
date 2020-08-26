@@ -33,5 +33,19 @@
             name="rentalPerspective">
       </perspective>
    </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.scalian.rental.ui.pref.color"
+            id="com.scalian.rental.ui.pref.color"
+            name="color">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.scalian.rental.ui.pref.ColorInitializer">
+      </initializer>
+   </extension>
 
 </plugin>
