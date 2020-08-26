@@ -6,6 +6,7 @@
       <view
             category="com.scalian.rental.ui.info"
             class="com.scalian.rental.ui.view.ViewInfo"
+            icon="icons/Rentals.png"
             id="com.scalian.rental.ui.info"
             name="info"
             restorable="true">
@@ -17,10 +18,20 @@
       <view
             category="com.scalian.rental.ui.info"
             class="com.scalian.rental.ui.view.AgencyView"
+            icon="icons/Agency.png"
             id="com.scalian.rental.ui.view.agencyview"
             name="agencyview"
             restorable="true">
       </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.scalian.rental.ui.RentalPerspective"
+            icon="icons/Agency.png"
+            id="com.scalian.rental.ui.rentalPerspective"
+            name="rentalPerspective">
+      </perspective>
    </extension>
 
 </plugin>
