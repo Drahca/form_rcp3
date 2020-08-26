@@ -10,6 +10,8 @@ import com.scalian.rental.core.RentalCoreActivator;
 
 public class AgencyView extends ViewPart {
 	
+	public static final String ID = "com.scalian.rental.ui.view.agencyview";
+	
 	public AgencyView() {
 		// TODO Auto-generated constructor stub
 	}

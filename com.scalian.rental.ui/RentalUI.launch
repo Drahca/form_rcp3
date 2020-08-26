@@ -2,7 +2,7 @@
 <launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
 <booleanAttribute key="append.args" value="true"/>
 <booleanAttribute key="askclear" value="true"/>
-<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
 <booleanAttribute key="automaticValidate" value="true"/>
 <stringAttribute key="bootstrap" value=""/>
 <stringAttribute key="checked" value="[NONE]"/>
@@ -11,9 +11,7 @@
 <booleanAttribute key="clearwslog" value="false"/>
 <stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/RentalUI"/>
 <booleanAttribute key="default" value="false"/>
-<setAttribute key="deselected_workspace_bundles">
-<setEntry value="com.cea.rcp10.plugin"/>
-</setAttribute>
+<setAttribute key="deselected_workspace_bundles"/>
 <booleanAttribute key="includeOptional" value="true"/>
 <stringAttribute key="location" value="${workspace_loc}/../runtime-RentalUI"/>
 <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
@@ -29,7 +27,9 @@
 <setAttribute key="selected_target_bundles">
 <setEntry value="com.ibm.icu@default:default"/>
 <setEntry value="javax.annotation@default:default"/>
+<setEntry value="javax.el@default:default"/>
 <setEntry value="javax.inject@default:default"/>
+<setEntry value="javax.servlet.jsp@default:default"/>
 <setEntry value="javax.servlet@default:default"/>
 <setEntry value="javax.xml@default:default"/>
 <setEntry value="org.apache.batik.constants@default:default"/>
@@ -41,6 +41,7 @@
 <setEntry value="org.apache.commons.logging@default:default"/>
 <setEntry value="org.apache.felix.gogo.runtime@default:default"/>
 <setEntry value="org.apache.felix.scr@1:true"/>
+<setEntry value="org.apache.jasper.glassfish@default:default"/>
 <setEntry value="org.apache.log4j@default:default"/>
 <setEntry value="org.apache.lucene.analyzers-common*8.4.1.v20200122-1459@default:default"/>
 <setEntry value="org.apache.lucene.analyzers-smartcn@default:default"/>
@@ -98,7 +99,10 @@
 <setEntry value="org.eclipse.equinox.common@2:true"/>
 <setEntry value="org.eclipse.equinox.event@default:default"/>
 <setEntry value="org.eclipse.equinox.http.jetty@default:default"/>
+<setEntry value="org.eclipse.equinox.http.registry@default:default"/>
 <setEntry value="org.eclipse.equinox.http.servlet@default:default"/>
+<setEntry value="org.eclipse.equinox.jsp.jasper.registry@default:default"/>
+<setEntry value="org.eclipse.equinox.jsp.jasper@default:default"/>
 <setEntry value="org.eclipse.equinox.p2.core@default:default"/>
 <setEntry value="org.eclipse.equinox.p2.engine@default:default"/>
 <setEntry value="org.eclipse.equinox.p2.metadata.repository@default:default"/>
@@ -110,8 +114,12 @@
 <setEntry value="org.eclipse.equinox.security@default:default"/>
 <setEntry value="org.eclipse.help.base@default:default"/>
 <setEntry value="org.eclipse.help.ui@default:default"/>
+<setEntry value="org.eclipse.help.webapp@default:default"/>
 <setEntry value="org.eclipse.help@default:default"/>
 <setEntry value="org.eclipse.jdt.annotation*2.2.600.v20200408-1511@default:default"/>
+<setEntry value="org.eclipse.jdt.compiler.apt@default:default"/>
+<setEntry value="org.eclipse.jdt.compiler.tool@default:default"/>
+<setEntry value="org.eclipse.jdt.core@default:default"/>
 <setEntry value="org.eclipse.jetty.http@default:default"/>
 <setEntry value="org.eclipse.jetty.io@default:default"/>
 <setEntry value="org.eclipse.jetty.security@default:default"/>
@@ -158,6 +166,7 @@
 </setAttribute>
 <setAttribute key="selected_workspace_bundles">
 <setEntry value="com.scalian.rental.core@default:default"/>
+<setEntry value="com.scalian.rental.help@default:default"/>
 <setEntry value="com.scalian.rental.ui@default:default"/>
 </setAttribute>
 <booleanAttribute key="show_selected_only" value="false"/>

@@ -2,7 +2,6 @@ package com.scalian.rental.ui.view;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -23,6 +22,8 @@ public class ViewInfo extends ViewPart implements ISelectionListener {
 	private Label lbl_locataire;
 	private Label lbl_dateDeb;
 	private Label lbl_dateFin;
+	
+	public static final String ID = "com.scalian.rental.ui.info";
 	
 	public ViewInfo() {
 		// TODO Auto-generated constructor stub
