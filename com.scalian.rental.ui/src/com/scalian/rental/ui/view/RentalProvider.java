@@ -3,7 +3,10 @@ package com.scalian.rental.ui.view;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.eclipse.jface.resource.ColorRegistry;
 import org.eclipse.jface.resource.ImageRegistry;
+import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.jface.resource.StringConverter;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
@@ -124,13 +127,12 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 
 	@Override
 	public Color getForeground(Object element) {
-		// TODO Auto-generated method stub
 		if(element instanceof Customer)
-			return Display.getCurrent().getSystemColor(SWT.COLOR_GREEN);
+			return getAColor(RentalUIActivator.getDefault().getPreferenceStore().getString(PREF_CUSTOMER_COLOR));
 		else if (element instanceof RentalObject)
-			return Display.getCurrent().getSystemColor(SWT.COLOR_RED);
+			return getAColor(RentalUIActivator.getDefault().getPreferenceStore().getString(PREF_RENTAL_OBJECT_COLOR));
 		else if (element instanceof Rental)
-			return Display.getCurrent().getSystemColor(SWT.COLOR_CYAN);
+			return getAColor(RentalUIActivator.getDefault().getPreferenceStore().getString(PREF_RENTAL_COLOR));
 		return null;
 	}
 
@@ -138,5 +140,16 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 	public Color getBackground(Object element) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	private Color getAColor(String rgbKey) {
+		ColorRegistry colorRegistry = JFaceResources.getColorRegistry();
+		
+		Color col = colorRegistry.get(rgbKey);
+		if(col == null) {
+			colorRegistry.put(rgbKey, StringConverter.asRGB(rgbKey));
+			col = colorRegistry.get(rgbKey);
+		}
+		return col;
 	}
 }

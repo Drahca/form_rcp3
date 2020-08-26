@@ -25,15 +25,4 @@ public class ColorInitializer extends AbstractPreferenceInitializer implements R
 		store.setDefault(PREF_RENTAL_COLOR, StringConverter.asString(new RGB(10,255,30)));
 		store.setDefault(PREF_RENTAL_OBJECT_COLOR, StringConverter.asString(new RGB(255,20,30)));
 	}
-
-	private Color getAColor(String rgbKey) {
-		ColorRegistry colorRegistry = JFaceResources.getColorRegistry();
-		
-		Color col = colorRegistry.get(rgbKey);
-		if(col == null) {
-			colorRegistry.put(rgbKey, StringConverter.asRGB(rgbKey));
-			col = colorRegistry.get(rgbKey);
-		}
-		return col;
-	}
 }
