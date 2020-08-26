@@ -9,7 +9,7 @@ import org.eclipse.ui.part.ViewPart;
 import com.scalian.rental.core.RentalCoreActivator;
 
 public class AgencyView extends ViewPart {
-
+	
 	public AgencyView() {
 		// TODO Auto-generated constructor stub
 	}
@@ -21,6 +21,8 @@ public class AgencyView extends ViewPart {
 		tv.setContentProvider(new RentalProvider());
 		tv.setLabelProvider(new RentalProvider());
 		tv.setInput(Arrays.asList(RentalCoreActivator.getAgency()));
+		
+		getSite().setSelectionProvider(tv);
 	}
 
 	@Override

@@ -1,17 +1,24 @@
 package com.scalian.rental.ui.view;
 
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.ITreeSelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.ui.ISelectionListener;
+import org.eclipse.ui.IViewSite;
+import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
 
 import com.opcoach.training.rental.Rental;
 import com.scalian.rental.core.RentalCoreActivator;
 
-public class ViewInfo extends ViewPart {
+public class ViewInfo extends ViewPart implements ISelectionListener {
 	private Label rentedObjectLabel;
 	private Label lbl_locataire;
 	private Label lbl_dateDeb;
@@ -19,6 +26,20 @@ public class ViewInfo extends ViewPart {
 	
 	public ViewInfo() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void init(IViewSite site) throws PartInitException {
+		// TODO Auto-generated method stub
+		super.init(site);
+		site.getPage().addSelectionListener(this);
+	}
+	
+	@Override
+	public void dispose() {
+		// TODO Auto-generated method stub
+		getSite().getPage().removeSelectionListener(this);
+		super.dispose();
 	}
 
 	@Override
@@ -75,6 +96,16 @@ public class ViewInfo extends ViewPart {
 	public void setFocus() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
+		if(selection instanceof IStructuredSelection) {
+			Object firstElement = ((IStructuredSelection) selection).getFirstElement();
+			if(firstElement instanceof Rental) {
+				setRental((Rental) firstElement);
+			}
+		}
 	}
 
 }
