@@ -7,7 +7,7 @@ Bundle-Activator: com.scalian.rental.core.RentalCoreActivator
 Bundle-Vendor: SCALIAN
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.common;visibility:=reexport,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore;visibility:=reexport
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.scalian.rental.core
 Bundle-ActivationPolicy: lazy
