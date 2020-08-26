@@ -3,14 +3,19 @@ package com.scalian.rental.ui.view;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.widgets.Display;
 
 import com.opcoach.training.rental.Customer;
+import com.opcoach.training.rental.Rental;
 import com.opcoach.training.rental.RentalAgency;
 import com.opcoach.training.rental.RentalObject;
 
-public class RentalProvider extends LabelProvider implements ITreeContentProvider {
+public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider {
 
 	@Override
 	public Object[] getElements(Object inputElement) {
@@ -28,6 +33,7 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 			RentalAgency agency = (RentalAgency) parentElement;
 			Collection<?> nodes = Arrays.asList(new Node(Node.CUSTOMERS, agency), new Node(Node.OBJETS_A_LOUER, agency), new Node(Node.LOCATIONS, agency));
 			return nodes.toArray();
+			// return new Node[] {new Node(Node.CUSTOMERS, agency), new Node(Node.OBJETS_A_LOUER, agency), new Node(Node.LOCATIONS, agency)};
 		}
 		else if(parentElement instanceof Node) {
 			return ((Node) parentElement).getChildren();
@@ -92,5 +98,24 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 		public String toString() {
 			return label;
 		}
+	}
+
+
+	@Override
+	public Color getForeground(Object element) {
+		// TODO Auto-generated method stub
+		if(element instanceof Customer)
+			return Display.getCurrent().getSystemColor(SWT.COLOR_GREEN);
+		else if (element instanceof RentalObject)
+			return Display.getCurrent().getSystemColor(SWT.COLOR_RED);
+		else if (element instanceof Rental)
+			return Display.getCurrent().getSystemColor(SWT.COLOR_CYAN);
+		return null;
+	}
+
+	@Override
+	public Color getBackground(Object element) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
