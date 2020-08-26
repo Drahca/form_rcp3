@@ -3,19 +3,23 @@ package com.scalian.rental.ui.view;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
 
 import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.Rental;
 import com.opcoach.training.rental.RentalAgency;
 import com.opcoach.training.rental.RentalObject;
+import com.scalian.rental.ui.RentalUIActivator;
+import com.scalian.rental.ui.RentalUIConstants;
 
-public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider {
+public class RentalProvider extends LabelProvider implements ITreeContentProvider, IColorProvider, RentalUIConstants {
 
 	@Override
 	public Object[] getElements(Object inputElement) {
@@ -66,6 +70,23 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 			return ((RentalObject) element).getName();
 		}
 		return super.getText(element);
+	}
+	
+	@Override
+	public Image getImage(Object element) {
+		ImageRegistry reg = RentalUIActivator.getDefault().getImageRegistry();
+		if(element instanceof RentalAgency) {
+			return reg.get(IMG_AGENCY);
+		}
+		else if(element instanceof Node) {
+			if( ((Node) element).label == Node.CUSTOMERS)
+				return reg.get(IMG_CUSTOMER);
+			if(((Node) element).label == Node.OBJETS_A_LOUER)
+				return reg.get(IMG_RENTAL_OBJECT);
+			if(((Node) element).label == Node.LOCATIONS)
+				return reg.get(IMG_RENTAL);
+		}
+		return super.getImage(element);
 	}
 	
 	
