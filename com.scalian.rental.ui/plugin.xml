@@ -14,6 +14,13 @@
             id="com.scalian.rental.ui.info"
             name="info">
       </category>
+      <view
+            category="com.scalian.rental.ui.info"
+            class="com.scalian.rental.ui.view.AgencyView"
+            id="com.scalian.rental.ui.view.agencyview"
+            name="agencyview"
+            restorable="true">
+      </view>
    </extension>
 
 </plugin>
