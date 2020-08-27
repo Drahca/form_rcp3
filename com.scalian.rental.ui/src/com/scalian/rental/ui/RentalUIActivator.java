@@ -1,12 +1,14 @@
 package com.scalian.rental.ui;
 
+import org.eclipse.core.runtime.IConfigurationElement;
+import org.eclipse.core.runtime.IExtensionRegistry;
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
-import org.osgi.framework.launch.Framework;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -29,12 +31,21 @@ public class RentalUIActivator extends AbstractUIPlugin implements RentalUIConst
 	public void start(BundleContext context) throws Exception {
 		super.start(context);
 		plugin = this;
+		readViewExtension();
 	}
 
 	@Override
 	public void stop(BundleContext context) throws Exception {
 		plugin = null;
 		super.stop(context);
+	}
+	
+	private void readViewExtension() {
+		IExtensionRegistry reg = Platform.getExtensionRegistry();
+		for(IConfigurationElement e : reg.getConfigurationElementsFor("org.eclipse.ui.views")) {
+			if(e.getName().equals("view"))
+				System.out.println("Plugin : " + e.getNamespaceIdentifier()+ "\t\tVue : "+ e.getAttribute("name"));
+		}
 	}
 
 	/**
