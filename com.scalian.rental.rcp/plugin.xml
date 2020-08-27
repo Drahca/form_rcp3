@@ -12,14 +12,6 @@
       </application>
    </extension>
    <extension
-         point="org.eclipse.ui.perspectives">
-      <perspective
-            class="com.scalian.rental.rcp.Perspective"
-            name="RCP Perspective"
-            id="com.scalian.rental.rcp.perspective">
-      </perspective>
-   </extension>
-   <extension
          id="product"
          point="org.eclipse.core.runtime.products">
       <product

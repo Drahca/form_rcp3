@@ -8,6 +8,8 @@ import com.scalian.rental.ui.view.ViewInfo;
 import org.eclipse.ui.IFolderLayout;
 
 public class RentalPerspective implements IPerspectiveFactory {
+	
+	public static final String ID = "com.scalian.rental.ui.rentalPerspective";
 
 	@Override
 	public void createInitialLayout(IPageLayout layout) {

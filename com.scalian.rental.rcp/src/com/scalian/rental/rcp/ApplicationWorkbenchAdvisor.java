@@ -4,9 +4,9 @@ import org.eclipse.ui.application.IWorkbenchWindowConfigurer;
 import org.eclipse.ui.application.WorkbenchAdvisor;
 import org.eclipse.ui.application.WorkbenchWindowAdvisor;
 
-public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
+import com.scalian.rental.ui.RentalPerspective;
 
-	private static final String PERSPECTIVE_ID = "com.scalian.rental.rcp.perspective"; //$NON-NLS-1$
+public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
 
 	@Override
     public WorkbenchWindowAdvisor createWorkbenchWindowAdvisor(IWorkbenchWindowConfigurer configurer) {
@@ -15,6 +15,6 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
     
     @Override
 	public String getInitialWindowPerspectiveId() {
-		return PERSPECTIVE_ID;
+		return RentalPerspective.ID;
 	}
 }

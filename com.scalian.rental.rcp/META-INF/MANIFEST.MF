@@ -7,6 +7,11 @@ Bundle-Vendor: SCALIAN
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ui,
  org.apache.felix.scr,
- org.eclipse.equinox.event
+ org.eclipse.equinox.event,
+ com.scalian.rental.adapters;bundle-version="1.0.0",
+ com.scalian.rental.core;bundle-version="1.0.0",
+ com.scalian.rental.help;bundle-version="1.0.0",
+ com.scalian.rental.ui;bundle-version="1.0.0",
+ com.scalian.rental.ui.cmd;bundle-version="1.0.0"
 Automatic-Module-Name: com.scalian.rental.rcp
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
