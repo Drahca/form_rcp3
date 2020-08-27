@@ -23,6 +23,12 @@
             name="agencyview"
             restorable="true">
       </view>
+      <view
+            class="com.scalian.rental.ui.view.CustomerInfo"
+            id="com.scalian.rental.ui.view.customerInfo"
+            name="customerInfo"
+            restorable="true">
+      </view>
    </extension>
    <extension
          point="org.eclipse.ui.perspectives">
