@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cmd
+Bundle-SymbolicName: com.scalian.rental.ui.cmd;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.scalian.rental.ui.cmd.Activator
+Bundle-Vendor: SCALIAN
+Require-Bundle: org.eclipse.core.runtime,
+ com.scalian.rental.core,
+ org.eclipse.core.expressions,
+ org.eclipse.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.scalian.rental.ui.cmd
+Bundle-ActivationPolicy: lazy
