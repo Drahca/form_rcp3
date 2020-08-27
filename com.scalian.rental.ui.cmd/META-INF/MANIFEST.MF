@@ -8,7 +8,8 @@ Bundle-Vendor: SCALIAN
 Require-Bundle: org.eclipse.core.runtime,
  com.scalian.rental.core,
  org.eclipse.core.expressions,
- org.eclipse.ui
+ org.eclipse.ui,
+ com.scalian.rental.ui;bundle-version="1.0.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: com.scalian.rental.ui.cmd
 Bundle-ActivationPolicy: lazy
