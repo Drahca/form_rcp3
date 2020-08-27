@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension-point id="palette" name="palette" schema="schema/palette.exsd"/>
    <extension
          point="org.eclipse.ui.views">
       <view
@@ -115,6 +116,19 @@
                tooltip="Hello World">
          </command>
       </menuContribution>
+   </extension>
+   <extension
+         point="com.scalian.rental.ui.palette">
+      <palette
+            id="com.scalian.rental.ui.default"
+            name="Default"
+            paletteClass="com.scalian.rental.ui.palette.DefaultPalette">
+      </palette>
+      <palette
+            id="com.scalian.rental.ui.uglyPalette"
+            name="Ugly"
+            paletteClass="com.scalian.rental.ui.palette.UglyPalette">
+      </palette>
    </extension>
 
 </plugin>
