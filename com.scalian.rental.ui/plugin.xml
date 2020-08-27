@@ -47,5 +47,66 @@
             class="com.scalian.rental.ui.pref.ColorInitializer">
       </initializer>
    </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="com.scalian.rental.ui.command.helloworld"
+            name="helloworld">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.scalian.rental.ui.handler.HelloWorld"
+            commandId="com.scalian.rental.ui.command.helloworld">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Rental">
+            <command
+                  commandId="com.scalian.rental.ui.command.helloworld"
+                  label="HelloWorld"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.views.ResourceNavigator?after=additions">
+         <command
+               commandId="com.scalian.rental.ui.command.helloworld"
+               label="Hello World"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:com.scalian.rental.ui.view.agencyview?after=additions">
+         <menu
+               label="Commande">
+            <command
+                  commandId="com.scalian.rental.ui.command.helloworld"
+                  label="Coucou"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:com.scalian.rental.ui.view.agencyview?after=additions">
+         <command
+               commandId="com.scalian.rental.ui.command.helloworld"
+               icon="icons/Agency.png"
+               label="Hello"
+               style="push"
+               tooltip="Hello World">
+         </command>
+      </menuContribution>
+   </extension>
 
 </plugin>
