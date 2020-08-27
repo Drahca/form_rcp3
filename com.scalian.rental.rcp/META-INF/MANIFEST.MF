@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Rcp
+Bundle-SymbolicName: com.scalian.rental.rcp;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SCALIAN
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.apache.felix.scr,
+ org.eclipse.equinox.event
+Automatic-Module-Name: com.scalian.rental.rcp
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
