@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Adapters
+Bundle-SymbolicName: com.scalian.rental.adapters;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.scalian.rental.adapters.Activator
+Bundle-Vendor: SCALIAN
+Require-Bundle: org.eclipse.core.runtime,
+ com.scalian.rental.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.scalian.rental.adapters
+Bundle-ActivationPolicy: lazy

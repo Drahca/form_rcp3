@@ -24,7 +24,9 @@
             restorable="true">
       </view>
       <view
+            category="com.scalian.rental.ui.info"
             class="com.scalian.rental.ui.view.CustomerInfo"
+            icon="icons/Customers.png"
             id="com.scalian.rental.ui.view.customerInfo"
             name="customerInfo"
             restorable="true">

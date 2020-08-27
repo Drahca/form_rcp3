@@ -1,5 +1,6 @@
 package com.scalian.rental.ui.view;
 
+import org.eclipse.core.runtime.Platform;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
@@ -16,6 +17,7 @@ import com.opcoach.training.rental.Customer;
 
 public class CustomerInfo extends ViewPart implements ISelectionListener {
 
+	public static final String ID = "com.scalian.rental.ui.view.customerInfo";
 	private Label lbl_custPrenom;
 	private Label lbl_custName;
 
@@ -69,11 +71,14 @@ public class CustomerInfo extends ViewPart implements ISelectionListener {
 
 	@Override
 	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
+		if(selection.isEmpty())
+			return;
+		
 		if(selection instanceof IStructuredSelection) {
 			Object firstElement = ((IStructuredSelection) selection).getFirstElement();
-			if(firstElement instanceof Customer) {
-				setCustomer((Customer) firstElement);
-			}
+			Customer c = Platform.getAdapterManager().getAdapter(firstElement, Customer.class);
+			if(c != null)
+				setCustomer(c);
 		}
 	}
 

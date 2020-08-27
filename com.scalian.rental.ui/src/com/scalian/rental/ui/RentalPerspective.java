@@ -5,6 +5,7 @@ import org.eclipse.ui.IPerspectiveFactory;
 
 import com.scalian.rental.ui.view.AgencyView;
 import com.scalian.rental.ui.view.ViewInfo;
+import org.eclipse.ui.IFolderLayout;
 
 public class RentalPerspective implements IPerspectiveFactory {
 
@@ -13,7 +14,11 @@ public class RentalPerspective implements IPerspectiveFactory {
 		// TODO Auto-generated method stub
 		String area = layout.getEditorArea();
 		layout.setEditorAreaVisible(false);
-		layout.addView(ViewInfo.ID, IPageLayout.TOP, 0.3f, area);
+		{
+			IFolderLayout folderLayout = layout.createFolder("folder", IPageLayout.TOP, 0.3f, area);
+			folderLayout.addView("com.scalian.rental.ui.info");
+			folderLayout.addView("com.scalian.rental.ui.view.customerInfo");
+		}
 		layout.addView(AgencyView.ID, IPageLayout.RIGHT, 0.5f, ViewInfo.ID);
 	}
 

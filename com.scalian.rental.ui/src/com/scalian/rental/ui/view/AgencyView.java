@@ -51,6 +51,7 @@ public class AgencyView extends ViewPart implements IPropertyChangeListener {
 		Menu menu = menuManager.createContextMenu(tv.getControl());
 		tv.getControl().setMenu(menu);
 		getSite().registerContextMenu(menuManager, tv);
+		tv.expandAll();
 	}
 
 	@Override
