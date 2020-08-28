@@ -6,4 +6,7 @@ import com.scalian.rental.model.rental.Customer;
 public class CustomerImpl extends MCustomerImpl implements Customer
 {
 
+	public String getDisplayName() {
+		return "** "+getFirstName() + " " + getName();
+	};
 }

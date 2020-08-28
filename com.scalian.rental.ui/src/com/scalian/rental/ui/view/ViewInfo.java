@@ -14,8 +14,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
 
-import com.opcoach.training.rental.Rental;
-import com.scalian.rental.core.RentalCoreActivator;
+import com.scalian.rental.model.rental.Rental;
 
 public class ViewInfo extends ViewPart implements ISelectionListener {
 	private Label rentedObjectLabel;
@@ -83,7 +82,6 @@ public class ViewInfo extends ViewPart implements ISelectionListener {
 		lbl_dateFin = new Label(grpDatesDeRservations, SWT.NONE);
 		lbl_dateFin.setText("New Label");
 		
-		setRental(RentalCoreActivator.getAgency().getRentals().get(0));
 	}
 	
 	public void setRental(Rental r) {

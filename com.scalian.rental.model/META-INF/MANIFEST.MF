@@ -9,6 +9,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: com.scalian.rental.model.rental,
+ com.scalian.rental.model.rental.helpers,
  com.scalian.rental.model.rental.impl,
  com.scalian.rental.model.rental.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,

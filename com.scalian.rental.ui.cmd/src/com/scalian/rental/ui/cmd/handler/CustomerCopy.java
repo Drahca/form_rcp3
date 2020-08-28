@@ -12,7 +12,7 @@ import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.handlers.HandlerUtil;
 
-import com.opcoach.training.rental.Customer;
+import com.scalian.rental.model.rental.Customer;
 import com.scalian.rental.ui.RentalUIActivator;
 import com.scalian.rental.ui.RentalUIConstants;
 

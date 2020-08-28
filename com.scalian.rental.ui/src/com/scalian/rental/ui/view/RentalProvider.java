@@ -10,9 +10,9 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
 
-import com.opcoach.training.rental.Customer;
-import com.opcoach.training.rental.RentalAgency;
-import com.opcoach.training.rental.RentalObject;
+import com.scalian.rental.model.rental.Customer;
+import com.scalian.rental.model.rental.RentalAgency;
+import com.scalian.rental.model.rental.RentalObject;
 import com.scalian.rental.ui.Palette;
 import com.scalian.rental.ui.RentalUIActivator;
 import com.scalian.rental.ui.RentalUIConstants;

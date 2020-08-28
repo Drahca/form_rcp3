@@ -181,7 +181,6 @@
 </setAttribute>
 <setAttribute key="selected_workspace_bundles">
 <setEntry value="com.scalian.rental.adapters@default:true"/>
-<setEntry value="com.scalian.rental.core@default:default"/>
 <setEntry value="com.scalian.rental.help@default:default"/>
 <setEntry value="com.scalian.rental.model.edit@default:default"/>
 <setEntry value="com.scalian.rental.model.editor@default:default"/>

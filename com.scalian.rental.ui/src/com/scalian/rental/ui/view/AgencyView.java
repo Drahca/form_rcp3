@@ -12,7 +12,7 @@ import org.eclipse.ui.IViewSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
 
-import com.scalian.rental.core.RentalCoreActivator;
+import com.scalian.rental.model.rental.helpers.RentalAgencyGenerator;
 import com.scalian.rental.ui.RentalUIActivator;
 
 public class AgencyView extends ViewPart implements IPropertyChangeListener {
@@ -43,7 +43,7 @@ public class AgencyView extends ViewPart implements IPropertyChangeListener {
 		tv = new TreeViewer(parent);
 		tv.setContentProvider(new RentalProvider());
 		tv.setLabelProvider(new RentalProvider());
-		tv.setInput(Arrays.asList(RentalCoreActivator.getAgency()));
+		tv.setInput(Arrays.asList(RentalAgencyGenerator.createSampleAgency()));
 		
 		getSite().setSelectionProvider(tv);
 		

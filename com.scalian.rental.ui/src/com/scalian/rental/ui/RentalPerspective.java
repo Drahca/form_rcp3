@@ -1,11 +1,11 @@
 package com.scalian.rental.ui;
 
+import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 
 import com.scalian.rental.ui.view.AgencyView;
 import com.scalian.rental.ui.view.ViewInfo;
-import org.eclipse.ui.IFolderLayout;
 
 public class RentalPerspective implements IPerspectiveFactory {
 	

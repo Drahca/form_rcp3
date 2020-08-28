@@ -13,7 +13,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.ViewPart;
 
-import com.opcoach.training.rental.Customer;
+import com.scalian.rental.model.rental.Customer;
 
 public class CustomerInfo extends ViewPart implements ISelectionListener {
 
@@ -65,7 +65,7 @@ public class CustomerInfo extends ViewPart implements ISelectionListener {
 	}
 	
 	public void setCustomer(Customer c) {
-		lbl_custName.setText(c.getLastName().toString());
+		lbl_custName.setText(c.getName().toString());
 		lbl_custPrenom.setText(c.getFirstName().toString());
 	}
 

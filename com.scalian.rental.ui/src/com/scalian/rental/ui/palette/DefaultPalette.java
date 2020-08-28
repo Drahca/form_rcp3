@@ -6,9 +6,9 @@ import org.eclipse.jface.resource.StringConverter;
 import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.swt.graphics.Color;
 
-import com.opcoach.training.rental.Customer;
-import com.opcoach.training.rental.Rental;
-import com.opcoach.training.rental.RentalObject;
+import com.scalian.rental.model.rental.Customer;
+import com.scalian.rental.model.rental.Rental;
+import com.scalian.rental.model.rental.RentalObject;
 import com.scalian.rental.ui.RentalUIActivator;
 import com.scalian.rental.ui.RentalUIConstants;
 

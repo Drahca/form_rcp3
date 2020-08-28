@@ -8,5 +8,7 @@ public interface Customer extends MCustomer
 	//
 	// For instance : 
 	// default public void addSomething(Something foo) {} ;
-
+	default public String getDisplayName() {
+		return null;
+	};
 }

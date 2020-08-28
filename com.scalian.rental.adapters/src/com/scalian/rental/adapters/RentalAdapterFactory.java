@@ -2,8 +2,8 @@ package com.scalian.rental.adapters;
 
 import org.eclipse.core.runtime.IAdapterFactory;
 
-import com.opcoach.training.rental.Customer;
-import com.opcoach.training.rental.Rental;
+import com.scalian.rental.model.rental.Customer;
+import com.scalian.rental.model.rental.Rental;
 
 public class RentalAdapterFactory implements IAdapterFactory {
 
