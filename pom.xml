@@ -70,6 +70,13 @@
 	<!-- the modules that should be built together -->
 	<modules>
 		<module>com.scalian.rental.tp</module>
+		<module>com.scalian.rental.core</module>
+		<module>com.scalian.rental.adapters</module>
+		<module>com.scalian.rental.feature</module>
+		<module>com.scalian.rental.help</module>
+		<module>com.scalian.rental.rcp</module>
+		<module>com.scalian.rental.ui</module>
+		<module>com.scalian.rental.ui.cmd</module>
 	</modules>
 
 </project>
