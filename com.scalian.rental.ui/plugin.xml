@@ -45,9 +45,15 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
+            category="com.scalian.rental.ui.pref.RentalColorPreference"
             class="com.scalian.rental.ui.pref.color"
             id="com.scalian.rental.ui.pref.color"
-            name="color">
+            name="Default Palette">
+      </page>
+      <page
+            class="com.scalian.rental.ui.pref.RentalColorPreferences"
+            id="com.scalian.rental.ui.pref.RentalColorPreference"
+            name="Palettes">
       </page>
    </extension>
    <extension

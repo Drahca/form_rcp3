@@ -27,7 +27,7 @@ public class RentalUIActivator extends AbstractUIPlugin implements RentalUIConst
 	// The shared instance
 	private static RentalUIActivator plugin;
 	
-	private static Map<String, Palette> paletteManager = new HashMap<>();
+	private Map<String, Palette> paletteManager = new HashMap<>();
 
 	/**
 	 * The constructor
@@ -55,6 +55,10 @@ public class RentalUIActivator extends AbstractUIPlugin implements RentalUIConst
 			if(e.getName().equals("view"))
 				System.out.println("Plugin : " + e.getNamespaceIdentifier()+ "\t\tVue : "+ e.getAttribute("name"));
 		}
+	}
+	
+	public Map<String, Palette> getPaletteManager() {
+		return paletteManager;
 	}
 	
 	private void readAllPalette() {
