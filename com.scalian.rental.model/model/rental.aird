@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_Ry7gQOk-EeqJDbdbTaXsTA" selectedViews="_SMWs4Ok-EeqJDbdbTaXsTA" version="14.3.1.202003261200">
+    <semanticResources>rental.ecore</semanticResources>
+    <semanticResources>rental.genmodel</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_SMWs4Ok-EeqJDbdbTaXsTA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SVI1cOk-EeqJDbdbTaXsTA" name="rental" repPath="#_SQkegOk-EeqJDbdbTaXsTA" changeId="edad9482-c9a7-40df-bae0-5b54363508a5">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+        <target xmi:type="ecore:EPackage" href="rental.ecore#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_SQkegOk-EeqJDbdbTaXsTA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_SVDV4Ok-EeqJDbdbTaXsTA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_SVDV4ek-EeqJDbdbTaXsTA"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_SWDbcOk-EeqJDbdbTaXsTA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_SWDbcek-EeqJDbdbTaXsTA" type="Sirius" element="_SQkegOk-EeqJDbdbTaXsTA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_eu1WAOk-EeqJDbdbTaXsTA" type="2001" element="_euafQOk-EeqJDbdbTaXsTA">
+          <children xmi:type="notation:Node" xmi:id="_eu5ncOk-EeqJDbdbTaXsTA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_eu5ncek-EeqJDbdbTaXsTA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_e44C0Ok-EeqJDbdbTaXsTA" type="3005" element="_eugl4Ok-EeqJDbdbTaXsTA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_e44C0ek-EeqJDbdbTaXsTA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e44C0uk-EeqJDbdbTaXsTA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_eu1WAek-EeqJDbdbTaXsTA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eu1WAuk-EeqJDbdbTaXsTA" width="500" height="90"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_SWDbcuk-EeqJDbdbTaXsTA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_euafQOk-EeqJDbdbTaXsTA" width="-1" height="-1">
+      <target xmi:type="ecore:EPackage" href="rental.ecore#/"/>
+      <semanticElements xmi:type="ecore:EPackage" href="rental.ecore#/"/>
+      <ownedStyle xmi:type="diagram:WorkspaceImage" uid="_eugl4Ok-EeqJDbdbTaXsTA" showIcon="false" labelPosition="node" workspacePath="/org.eclipse.emf.ecoretools.design/icons/full/back/empty.svg">
+        <description xmi:type="style:WorkspaceImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@nodeMappings[name='Empty%20Diagram']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@nodeMappings[name='Empty%20Diagram']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_SRKUYOk-EeqJDbdbTaXsTA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Validation']"/>
+    <target xmi:type="ecore:EPackage" href="rental.ecore#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
