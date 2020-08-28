@@ -1,10 +1,16 @@
 package com.scalian.rental.ui;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionRegistry;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Platform;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.resource.ImageRegistry;
+import org.eclipse.jface.viewers.IColorProvider;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
@@ -20,6 +26,8 @@ public class RentalUIActivator extends AbstractUIPlugin implements RentalUIConst
 
 	// The shared instance
 	private static RentalUIActivator plugin;
+	
+	private static Map<String, Palette> paletteManager = new HashMap<>();
 
 	/**
 	 * The constructor
@@ -32,6 +40,7 @@ public class RentalUIActivator extends AbstractUIPlugin implements RentalUIConst
 		super.start(context);
 		plugin = this;
 		readViewExtension();
+		readAllPalette();
 	}
 
 	@Override
@@ -45,6 +54,22 @@ public class RentalUIActivator extends AbstractUIPlugin implements RentalUIConst
 		for(IConfigurationElement e : reg.getConfigurationElementsFor("org.eclipse.ui.views")) {
 			if(e.getName().equals("view"))
 				System.out.println("Plugin : " + e.getNamespaceIdentifier()+ "\t\tVue : "+ e.getAttribute("name"));
+		}
+	}
+	
+	private void readAllPalette() {
+		IExtensionRegistry reg = Platform.getExtensionRegistry();
+		for(IConfigurationElement e : reg.getConfigurationElementsFor("com.scalian.rental.ui.palette")) {
+			Palette temp = new Palette();
+			temp.setId(e.getAttribute("id"));
+			temp.setName(e.getAttribute("name"));
+			try {
+				temp.setProvider((IColorProvider) e.createExecutableExtension("paletteClass"));
+				paletteManager.put(temp.getId(), temp);
+				System.out.println("Plugin : " + e.getNamespaceIdentifier()+ "\t\tPalette : "+ e.getAttribute("name"));
+			} catch(Exception ex) {
+				getLog().log(new Status(IStatus.ERROR, PLUGIN_ID, "Impossible de créer l'extension de Palette avec la classe paletteClass", ex));
+			}
 		}
 	}
 
