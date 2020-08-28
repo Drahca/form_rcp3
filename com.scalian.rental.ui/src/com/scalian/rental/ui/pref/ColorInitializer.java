@@ -2,10 +2,7 @@ package com.scalian.rental.ui.pref;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
-import org.eclipse.jface.resource.ColorRegistry;
-import org.eclipse.jface.resource.JFaceResources;
 import org.eclipse.jface.resource.StringConverter;
-import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.RGB;
 
 import com.scalian.rental.ui.RentalUIActivator;
