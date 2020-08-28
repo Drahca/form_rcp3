@@ -418,6 +418,16 @@ public class MRentalPackageImpl extends EPackageImpl implements MRentalPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRentalObject_Instruction() {
+		return (EAttribute) rentalObjectEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EOperation getRentalObject__Rent__MCustomer() {
 		return rentalObjectEClass.getEOperations().get(0);
 	}
@@ -621,6 +631,7 @@ public class MRentalPackageImpl extends EPackageImpl implements MRentalPackage {
 		createEAttribute(rentalObjectEClass, RENTAL_OBJECT__NAME);
 		createEReference(rentalObjectEClass, RENTAL_OBJECT__PARENT_AGENCY);
 		createEAttribute(rentalObjectEClass, RENTAL_OBJECT__AVAILABLE);
+		createEAttribute(rentalObjectEClass, RENTAL_OBJECT__INSTRUCTION);
 		createEOperation(rentalObjectEClass, RENTAL_OBJECT___RENT__MCUSTOMER);
 
 		licenseEClass = createEClass(LICENSE);
@@ -743,6 +754,9 @@ public class MRentalPackageImpl extends EPackageImpl implements MRentalPackage {
 				"parentAgency", null, 1, 1, RentalObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRentalObject_Available(), ecorePackage.getEBoolean(), "available", null, 0, 1,
+				RentalObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRentalObject_Instruction(), ecorePackage.getEString(), "instruction", null, 0, 1,
 				RentalObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 

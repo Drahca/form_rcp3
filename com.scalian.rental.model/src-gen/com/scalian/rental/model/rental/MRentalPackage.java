@@ -351,13 +351,22 @@ public interface MRentalPackage extends EPackage {
 	int RENTAL_OBJECT__AVAILABLE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Instruction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RENTAL_OBJECT__INSTRUCTION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Object</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RENTAL_OBJECT_FEATURE_COUNT = 4;
+	int RENTAL_OBJECT_FEATURE_COUNT = 5;
 
 	/**
 	 * The operation id for the '<em>Rent</em>' operation.
@@ -823,6 +832,17 @@ public interface MRentalPackage extends EPackage {
 	EAttribute getRentalObject_Available();
 
 	/**
+	 * Returns the meta object for the attribute '{@link com.scalian.rental.model.rental.MRentalObject#getInstruction <em>Instruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Instruction</em>'.
+	 * @see com.scalian.rental.model.rental.MRentalObject#getInstruction()
+	 * @see #getRentalObject()
+	 * @generated
+	 */
+	EAttribute getRentalObject_Instruction();
+
+	/**
 	 * Returns the meta object for the '{@link com.scalian.rental.model.rental.MRentalObject#rent(com.scalian.rental.model.rental.MCustomer) <em>Rent</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1221,6 +1241,14 @@ public interface MRentalPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RENTAL_OBJECT__AVAILABLE = eINSTANCE.getRentalObject_Available();
+
+		/**
+		 * The meta object literal for the '<em><b>Instruction</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RENTAL_OBJECT__INSTRUCTION = eINSTANCE.getRentalObject_Instruction();
 
 		/**
 		 * The meta object literal for the '<em><b>Rent</b></em>' operation.

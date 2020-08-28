@@ -53,6 +53,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rental.ecore#//RentalObject/name"/>
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference rental.ecore#//RentalObject/parentAgency"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rental.ecore#//RentalObject/available"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rental.ecore#//RentalObject/instruction"/>
       <genOperations ecoreOperation="rental.ecore#//RentalObject/rent">
         <genParameters ecoreParameter="rental.ecore#//RentalObject/rent/customer"/>
       </genOperations>

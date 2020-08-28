@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link com.scalian.rental.model.rental.impl.MRentalObjectImpl#getName <em>Name</em>}</li>
  *   <li>{@link com.scalian.rental.model.rental.impl.MRentalObjectImpl#getParentAgency <em>Parent Agency</em>}</li>
  *   <li>{@link com.scalian.rental.model.rental.impl.MRentalObjectImpl#isAvailable <em>Available</em>}</li>
+ *   <li>{@link com.scalian.rental.model.rental.impl.MRentalObjectImpl#getInstruction <em>Instruction</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +100,26 @@ public class MRentalObjectImpl extends MinimalEObjectImpl.Container implements R
 	 * @ordered
 	 */
 	protected boolean available = AVAILABLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getInstruction() <em>Instruction</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstruction()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String INSTRUCTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getInstruction() <em>Instruction</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInstruction()
+	 * @generated
+	 * @ordered
+	 */
+	protected String instruction = INSTRUCTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -242,6 +263,30 @@ public class MRentalObjectImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
+	public String getInstruction() {
+		return instruction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInstruction(String newInstruction) {
+		String oldInstruction = instruction;
+		instruction = newInstruction;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MRentalPackage.RENTAL_OBJECT__INSTRUCTION,
+					oldInstruction, instruction));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Rental rent(Customer customer) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -309,6 +354,8 @@ public class MRentalObjectImpl extends MinimalEObjectImpl.Container implements R
 			return getParentAgency();
 		case MRentalPackage.RENTAL_OBJECT__AVAILABLE:
 			return isAvailable();
+		case MRentalPackage.RENTAL_OBJECT__INSTRUCTION:
+			return getInstruction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -332,6 +379,9 @@ public class MRentalObjectImpl extends MinimalEObjectImpl.Container implements R
 			return;
 		case MRentalPackage.RENTAL_OBJECT__AVAILABLE:
 			setAvailable((Boolean) newValue);
+			return;
+		case MRentalPackage.RENTAL_OBJECT__INSTRUCTION:
+			setInstruction((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -357,6 +407,9 @@ public class MRentalObjectImpl extends MinimalEObjectImpl.Container implements R
 		case MRentalPackage.RENTAL_OBJECT__AVAILABLE:
 			setAvailable(AVAILABLE_EDEFAULT);
 			return;
+		case MRentalPackage.RENTAL_OBJECT__INSTRUCTION:
+			setInstruction(INSTRUCTION_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -377,6 +430,8 @@ public class MRentalObjectImpl extends MinimalEObjectImpl.Container implements R
 			return getParentAgency() != null;
 		case MRentalPackage.RENTAL_OBJECT__AVAILABLE:
 			return available != AVAILABLE_EDEFAULT;
+		case MRentalPackage.RENTAL_OBJECT__INSTRUCTION:
+			return INSTRUCTION_EDEFAULT == null ? instruction != null : !INSTRUCTION_EDEFAULT.equals(instruction);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -412,6 +467,8 @@ public class MRentalObjectImpl extends MinimalEObjectImpl.Container implements R
 		result.append(name);
 		result.append(", available: ");
 		result.append(available);
+		result.append(", instruction: ");
+		result.append(instruction);
 		result.append(')');
 		return result.toString();
 	}

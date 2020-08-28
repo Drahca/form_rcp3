@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.scalian.rental.model.rental.MRentalObject#getName <em>Name</em>}</li>
  *   <li>{@link com.scalian.rental.model.rental.MRentalObject#getParentAgency <em>Parent Agency</em>}</li>
  *   <li>{@link com.scalian.rental.model.rental.MRentalObject#isAvailable <em>Available</em>}</li>
+ *   <li>{@link com.scalian.rental.model.rental.MRentalObject#getInstruction <em>Instruction</em>}</li>
  * </ul>
  *
  * @see com.scalian.rental.model.rental.MRentalPackage#getRentalObject()
@@ -113,6 +114,28 @@ public interface MRentalObject extends EObject {
 	 * @generated
 	 */
 	void setAvailable(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Instruction</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Instruction</em>' attribute.
+	 * @see #setInstruction(String)
+	 * @see com.scalian.rental.model.rental.MRentalPackage#getRentalObject_Instruction()
+	 * @model
+	 * @generated
+	 */
+	String getInstruction();
+
+	/**
+	 * Sets the value of the '{@link com.scalian.rental.model.rental.MRentalObject#getInstruction <em>Instruction</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Instruction</em>' attribute.
+	 * @see #getInstruction()
+	 * @generated
+	 */
+	void setInstruction(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

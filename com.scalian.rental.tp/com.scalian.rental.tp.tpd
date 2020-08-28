@@ -29,6 +29,9 @@ location "http://download.eclipse.org/releases/2020-06" {
 	org.eclipse.equinox.executable.feature.group
 	org.eclipse.equinox.ds
 	org.eclipse.help.feature.group
+	org.eclipse.emf.edit.feature.group
+	org.eclipse.emf.edit.ui.feature.group
+	org.eclipse.ui.ide.application
 	
 	// Dependencies to launch swtbot tests 
 	/*org.eclipse.pde.junit.runtime
