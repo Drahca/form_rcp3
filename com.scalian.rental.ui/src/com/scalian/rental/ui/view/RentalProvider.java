@@ -19,6 +19,7 @@ import com.opcoach.training.rental.Customer;
 import com.opcoach.training.rental.Rental;
 import com.opcoach.training.rental.RentalAgency;
 import com.opcoach.training.rental.RentalObject;
+import com.scalian.rental.ui.Palette;
 import com.scalian.rental.ui.RentalUIActivator;
 import com.scalian.rental.ui.RentalUIConstants;
 
@@ -167,29 +168,15 @@ public class RentalProvider extends LabelProvider implements ITreeContentProvide
 
 	@Override
 	public Color getForeground(Object element) {
-		if(element instanceof Customer)
-			return getAColor(RentalUIActivator.getDefault().getPreferenceStore().getString(PREF_CUSTOMER_COLOR));
-		else if (element instanceof RentalObject)
-			return getAColor(RentalUIActivator.getDefault().getPreferenceStore().getString(PREF_RENTAL_OBJECT_COLOR));
-		else if (element instanceof Rental)
-			return getAColor(RentalUIActivator.getDefault().getPreferenceStore().getString(PREF_RENTAL_COLOR));
-		return null;
+		String id = RentalUIActivator.getDefault().getPreferenceStore().getString(PREF_PALETTE);
+		Palette p = RentalUIActivator.getDefault().getPaletteManager().get(id);
+		return p == null ? null : p.getProvider().getForeground(element);
 	}
 
 	@Override
 	public Color getBackground(Object element) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	private Color getAColor(String rgbKey) {
-		ColorRegistry colorRegistry = JFaceResources.getColorRegistry();
-		
-		Color col = colorRegistry.get(rgbKey);
-		if(col == null) {
-			colorRegistry.put(rgbKey, StringConverter.asRGB(rgbKey));
-			col = colorRegistry.get(rgbKey);
-		}
-		return col;
+		String id = RentalUIActivator.getDefault().getPreferenceStore().getString(PREF_PALETTE);
+		Palette p = RentalUIActivator.getDefault().getPaletteManager().get(id);
+		return p == null ? null : p.getProvider().getBackground(element);
 	}
 }
