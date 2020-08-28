@@ -24,5 +24,6 @@ public class ColorInitializer extends AbstractPreferenceInitializer implements R
 		store.setDefault(PREF_CUSTOMER_COLOR, StringConverter.asString(new RGB(10,20,255)));
 		store.setDefault(PREF_RENTAL_COLOR, StringConverter.asString(new RGB(10,255,30)));
 		store.setDefault(PREF_RENTAL_OBJECT_COLOR, StringConverter.asString(new RGB(255,20,30)));
+		store.setDefault(PREF_PALETTE, "com.scalian.rental.ui.default");
 	}
 }
